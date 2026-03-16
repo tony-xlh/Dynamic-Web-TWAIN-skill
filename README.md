@@ -13,3 +13,24 @@ You can put the `web-twain` folder in the following places to make it effective.
 | `~/.cursor/skills/` | User-level (global) |
 
 Replace `cursor` width your editor's name, like `.codex/skills/`.
+
+
+## Prompt Examples
+
+### Asking Questions
+
+```
+What is Dynamic Web TWAIN service? Please also show the links of referenced docs.
+```
+
+### Creating Samples
+
+
+```
+Create a react project to use Dynamic Web TWAIN to scan documents. I only need a minimum sample which lists scanners, sets whether to use document feeder, DPI, pixel type and scans documents.
+```
+
+
+
+
+
