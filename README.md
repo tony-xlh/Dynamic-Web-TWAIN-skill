@@ -25,10 +25,23 @@ What is Dynamic Web TWAIN service? Please also show the links of referenced docs
 ### Creating Samples
 
 
-```
-Create a react project to use Dynamic Web TWAIN to scan documents. I only need a minimum sample which lists scanners, sets whether to use document feeder, DPI, pixel type and scans documents.
-```
+1. Vanilla-JS local resources sample.
 
+   ```
+   Create an index.html file to use Dynamic Web TWAIN to scan documents, with basic document scanners listing and configuration functions. Please use resources files included in SDK instead of using CDN.
+   ```
+
+2. Vanilla-JS CDN sample.
+
+   ```
+   Create an index.html file to use Dynamic Web TWAIN to scan documents, with basic document scanners listing and configuration functions. Please use resources files from CDN.
+   ```
+
+3. React sample.
+
+   ```
+   Create a react project to use Dynamic Web TWAIN to scan documents. I only need a minimum sample which lists scanners, sets whether to use document feeder, DPI, pixel type and scans documents.
+   ```
 
 
 
