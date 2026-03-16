@@ -14,7 +14,6 @@ You can put the `web-twain` folder in the following places to make it effective.
 
 Replace `cursor` width your editor's name, like `.codex/skills/`.
 
-
 ## Prompt Examples
 
 ### Asking Questions
