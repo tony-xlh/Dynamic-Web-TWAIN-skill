@@ -12,4 +12,4 @@ You can put the `web-twain` folder in the following places to make it effective.
 | `.cursor/skills/`   | Project-level       |
 | `~/.cursor/skills/` | User-level (global) |
 
-Replace `cursor` width your editor's name, like `.codex/skills/`.
+Replace `cursor` with your editor's name, like `.codex/skills/`.
