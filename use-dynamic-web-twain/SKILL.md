@@ -328,7 +328,7 @@ DWT provides two modes: silent (custom settings) and interactive (scanner's nati
 async function acquireImage() {
   if (!DWTObject) return;
   try {
-    await DWTObject.SelectSourceAsync();
+    await DWTObject.SelectSourceAsync(); // Opens a dialog to select the scanner source. You can also use SelectDeviceAsync(device) if you already have the device info.
     await DWTObject.AcquireImageAsync({
       IfCloseSourceAfterAcquire: true,
       IfShowUI: false,
@@ -340,6 +340,14 @@ async function acquireImage() {
   } catch (exp) {
     alert(exp.message);
   }
+}
+
+async function acquireImageWithSpecifiedScanner(device) {
+  if (!DWTObject) return;
+  await DWTObject.SelectDeviceAsync(device); // Get the list of devices using DWTObject.GetDevicesAsync()
+  await DWTObject.AcquireImageAsync({
+    IfCloseSourceAfterAcquire: true,
+  })
 }
 
 // Mode 2: Let scanner's native dialog handle settings
@@ -582,7 +590,7 @@ DWTObject.SwitchImage(0, 3); // Swap image at index 0 with index 3
 ```js
 // Save current image as file
 function saveCurrentImage() {
-  DWTObject.SaveAsPNG(DWTObject.CurrentImageIndexInBuffer, "scanned.png");
+  DWTObject.SaveAsPNG("scanned.png", DWTObject.CurrentImageIndexInBuffer);
 }
 
 function saveAllAsPDF() {
