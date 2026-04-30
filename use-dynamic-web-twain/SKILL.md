@@ -594,7 +594,7 @@ function saveCurrentImage() {
 }
 
 function saveAllAsPDF() {
-  DWTObject.SaveAsPDF("all-pages.pdf");
+  DWTObject.SaveAllAsPDF("all-pages.pdf");
 }
 
 function saveAllAsTIFF() {
