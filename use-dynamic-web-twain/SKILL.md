@@ -61,7 +61,7 @@ Include the DWT script from CDN, configure, and load:
       Dynamsoft.DWT.ResourcesPath =
         "https://cdn.jsdelivr.net/npm/dwt/dist";
       Dynamsoft.DWT.ServiceInstallerLocation =
-        "https://demo.dynamsoft.com/DWT/Resources/dist/";
+        "https://unpkg.com/dwt/dist/dist/";
       Dynamsoft.DWT.Load();
 
       var DWTObject;
@@ -659,7 +659,7 @@ If the service is not installed, DWT will prompt the user to download it. Set `S
 
 ```js
 Dynamsoft.DWT.ServiceInstallerLocation =
-  "https://demo.dynamsoft.com/DWT/Resources/dist/";
+  "https://unpkg.com/dwt/dist/dist/";
 ```
 
 Without this URL, users will be directed to according to `ResourcesPath`.
