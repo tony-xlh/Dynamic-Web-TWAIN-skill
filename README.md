@@ -12,7 +12,7 @@ You can put the `use-dynamic-web-twain` folder in the following places to make i
 | `.cursor/skills/`   | Project-level       |
 | `~/.cursor/skills/` | User-level (global) |
 
-Replace `cursor` width your editor's name, like `.codex/skills/`.
+Replace `cursor` width your agent's name, like `.codex/skills/`, `.claude/skills/`.
 
 ## Prompt Examples
 
