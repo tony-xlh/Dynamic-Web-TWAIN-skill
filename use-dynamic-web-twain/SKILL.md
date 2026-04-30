@@ -287,7 +287,58 @@ export default App;
 
 > **Note:** When using the npm package, clear any default styles in `src/App.css` and `src/index.css` to avoid layout conflicts with the DWT viewer.
 
+## Reference Documentation
+
+The `references/` directory contains the full API reference, organized by topic:
+
+### Core API
+
+| File | Content |
+| --- | --- |
+| [index.md](references/index.md) | Full API index and navigation |
+| [Dynamsoft_WebTwainEnv.md](references/Dynamsoft_WebTwainEnv.md) | Global config, `Dynamsoft.DWT` methods, events |
+| [Dynamsoft_Enum.md](references/Dynamsoft_Enum.md) | All enumerations (`PixelType`, `ImageType`, `UploadDataFormat`, etc.) |
+| [interfaces.md](references/interfaces.md) | TypeScript interface definitions |
+
+### WebTwain Instance
+
+| File | Content |
+| --- | --- |
+| [WebTwain_Acquire.md](references/WebTwain_Acquire.md) | Scanner/image acquisition methods, events |
+| [WebTwain_Buffer.md](references/WebTwain_Buffer.md) | Buffer management, tags, documents, events |
+| [WebTwain_Edit.md](references/WebTwain_Edit.md) | Image editing (rotate, crop, flip, mirror, etc.) |
+| [WebTwain_IO.md](references/WebTwain_IO.md) | Image input/output, load/save, upload/download |
+| [WebTwain_Viewer.md](references/WebTwain_Viewer.md) | Viewer control and display settings |
+| [WebTwain_Util.md](references/WebTwain_Util.md) | Utility methods |
+
+### Other Modules
+
+| File | Content |
+| --- | --- |
+| [Device.md](references/Device.md) | Device/scanner management |
+| [Dynamsoft_FileUploader.md](references/Dynamsoft_FileUploader.md) | File uploader module |
+| [restful.md](references/restful.md) | RESTful API for remote scanning |
+
+### Add-ons
+
+| File | Content |
+| --- | --- |
+| [Addon_BarcodeReader.md](references/Addon_BarcodeReader.md) | Barcode Reader add-on |
+| [Addon_OCR.md](references/Addon_OCR.md) | OCR add-on |
+| [Addon_PDF.md](references/Addon_PDF.md) | PDF rasterizer add-on |
+| [Addon_Webcam.md](references/Addon_Webcam.md) | Webcam capture add-on |
+
+### Appendix
+
+| File | Content |
+| --- | --- |
+| [appendix.md](references/appendix.md) | Appendix and supplementary info |
+
+---
+
 ## DWT Configuration Reference
+
+> See [Dynamsoft_WebTwainEnv.md](references/Dynamsoft_WebTwainEnv.md) for the full global API reference.
 
 These properties must be set **before** calling `Dynamsoft.DWT.Load()`:
 
@@ -320,6 +371,8 @@ Dynamsoft.DWT.Containers = [
 ## Common Operations
 
 ### Image Acquisition
+
+> See [WebTwain_Acquire.md](references/WebTwain_Acquire.md) for the full acquire API reference.
 
 DWT provides two modes: silent (custom settings) and interactive (scanner's native UI):
 
@@ -377,6 +430,8 @@ Key `AcquireImageAsync` options:
 | `IfFeederEnabled` | bool | Use document feeder if available |
 
 ### Image Processing
+
+> See [WebTwain_Edit.md](references/WebTwain_Edit.md) for the full image editing API reference.
 
 ```js
 function binarizeImage() {
@@ -472,6 +527,8 @@ function AcquireImage() {
 
 ### Upload
 
+> See [WebTwain_IO.md](references/WebTwain_IO.md) and [Dynamsoft_FileUploader.md](references/Dynamsoft_FileUploader.md) for the full upload API reference.
+
 ```js
 // Upload current image as PNG
 function uploadCurrentAsPNG() {
@@ -533,6 +590,8 @@ function getImageAsBase64(indices) {
 
 ### Input
 
+> See [WebTwain_IO.md](references/WebTwain_IO.md) for the full I/O API reference.
+
 ```js
 // Load image from file
 function loadImageFromDisk() {
@@ -565,6 +624,8 @@ function loadImageFromBinary(imageData){
 
 ### Buffer Management
 
+> See [WebTwain_Buffer.md](references/WebTwain_Buffer.md) for the full buffer API reference.
+
 ```js
 // Navigate through scanned images
 DWTObject.CurrentImageIndexInBuffer = 2; // Switch to 3rd image (0-based)
@@ -586,6 +647,8 @@ DWTObject.SwitchImage(0, 3); // Swap image at index 0 with index 3
 ```
 
 ### Saving Locally
+
+> See [WebTwain_IO.md](references/WebTwain_IO.md) for more save/export options.
 
 ```js
 // Save current image as file
@@ -630,31 +693,15 @@ Dynamsoft.DWT.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
 
 ## Enum Reference
 
-When using the CDN approach, you have access to the full `Dynamsoft.DWT.EnumDWT_*` namespace. When using the npm package or a bundler, these may not be available — use numeric values directly or define your own constants:
+> See [Dynamsoft_Enum.md](references/Dynamsoft_Enum.md) for the complete enum reference — `PixelType`, `ImageType`, `UploadDataFormat`, `Cap`, `TransferMode`, `TIFFCompressionType`, and more.
 
-### PixelType
+Quick reference for the most common enums:
 
-| Constant | Value | Description |
+| Enum | Constant | Value |
 | --- | --- | --- |
-| `EnumDWT_PixelType.TWPT_BW` | 0 | Black and white |
-| `EnumDWT_PixelType.TWPT_GRAY` | 1 | Grayscale |
-| `EnumDWT_PixelType.TWPT_RGB` | 2 | Full color |
-
-### ImageType (output format)
-
-| Constant | Value | Extension |
-| --- | --- | --- |
-| `EnumDWT_ImageType.IT_JPG` | 1 | .jpg |
-| `EnumDWT_ImageType.IT_PNG` | 2 | .png |
-| `EnumDWT_ImageType.IT_TIF` | 3 | .tif |
-| `EnumDWT_ImageType.IT_PDF` | 4 | .pdf |
-
-### UploadDataFormat
-
-| Constant | Value | Description |
-| --- | --- | --- |
-| `EnumDWT_UploadDataFormat.Binary` | 1 | Raw binary data |
-| `EnumDWT_UploadDataFormat.Base64` | 2 | Base64-encoded string |
+| **PixelType** | `TWPT_BW` / `TWPT_GRAY` / `TWPT_RGB` | 0 / 1 / 2 |
+| **ImageType** | `IT_JPG` / `IT_PNG` / `IT_TIF` / `IT_PDF` | 1 / 2 / 3 / 4 |
+| **UploadDataFormat** | `Binary` / `Base64` | 1 / 2 |
 
 
 ## Dynamic Web TWAIN Service
