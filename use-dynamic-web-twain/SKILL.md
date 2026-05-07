@@ -676,18 +676,30 @@ Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
   DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 });
 
-// Fires when images in the buffer change
+// Fires when images in the buffer change like flipped, cropped, rotated, etc. or a new image has been acquired.
 // Operation type:
 // 1: new image(s) added at the tail
 // 2: image(s) inserted before the current index
 // 3: image(s) deleted
 // 4: image(s) modified
-Dynamsoft.DWT.RegisterEvent("OnBitmapChanged", function (updatedIndices, operationType, currentIndex) {
-    console.log(updatedIndices);
+DWTObject.RegisterEvent("OnBitmapChanged", function (indices, type, index) {
+    console.log(indices);
 });
 
+// An enhanced callback triggered when a change occurs in the buffer.
+// Action types include
+//   add: New pages are added to the buffer.
+//   remove: The existing pages are removed.
+//   modify: The existing pages are modified.
+//   shift: The existing pages are reordered or the selected pages are changed.
+//   filter: The existing pages are filtered by a tag.
+DWTObject.RegisterEvent("OnBufferChanged", function (bufferChangeInfo) {
+    console.log(indices);
+});
+
+
 // Fires after each page is scanned and transferred to the buffer
-Dynamsoft.DWT.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
+DWTObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
   console.log("Page scanned, index:", outputInfo);
 });
 ```
