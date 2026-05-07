@@ -22,6 +22,7 @@ Use DWT when you need:
 - **Browser-based scanner control** — Select scanner source, set resolution, color mode, paper size
 - **File upload from scanners** — Stream scanned images directly to a server via HTTP/FTP
 - **Barcode/OCR** — DWT add-ons can read barcodes and perform OCR on scanned documents
+- **Question/Answer** — Ask questions about Web TWAIN
 
 ## Setup Approaches
 
