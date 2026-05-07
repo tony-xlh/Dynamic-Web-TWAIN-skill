@@ -1,6 +1,6 @@
 ---
 name: use-dynamsoft-document-viewer
-description: Integrate Dynamic Web TWAIN document scanning into web apps. Scan, upload, and process images from scanners/cameras in vanilla JS or React.
+description: Integrate Dynamsoft Document Viewer into web apps. You can view and edit image and PDF files in vanilla JS or React/Vue/Angular, etc.
 version: 1.0.0
 license: MIT
 ---
@@ -17,7 +17,7 @@ Use DDV when you need:
 
 - View and annotate PDFs directly in the browser
 - View and manage scanned images
-- Edit scanned images (rotate, crop, enhance)
+- Edit scanned images (rotate, crop, enhance, overlay images using annotation, etc.)
 - Save documents in various formats (PDF, TIFF, JPEG)
 
 Dynamsoft Document Viewer can be used with Dynamic Web TWAIN and Dynamsoft Mobile Document Scanner for a complete scanning and viewing solution.
