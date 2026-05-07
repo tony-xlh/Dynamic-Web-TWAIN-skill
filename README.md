@@ -43,6 +43,8 @@ What is Dynamic Web TWAIN service? Please also show the links of referenced docs
    Create a react project to use Dynamic Web TWAIN to scan documents. I only need a minimum sample which lists scanners, sets whether to use document feeder, DPI, pixel type and scans documents.
    ```
 
+## Other Skills
 
+Skill for Dynamsoft Document Viewer is in this repo as well.
 
 
