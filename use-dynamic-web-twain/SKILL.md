@@ -694,7 +694,7 @@ DWTObject.RegisterEvent("OnBitmapChanged", function (indices, type, index) {
 //   shift: The existing pages are reordered or the selected pages are changed.
 //   filter: The existing pages are filtered by a tag.
 DWTObject.RegisterEvent("OnBufferChanged", function (bufferChangeInfo) {
-    console.log(indices);
+    console.log(bufferChangeInfo);
 });
 
 
