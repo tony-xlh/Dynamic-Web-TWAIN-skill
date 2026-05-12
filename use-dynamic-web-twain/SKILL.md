@@ -10,6 +10,8 @@ license: MIT
 Dynamic Web TWAIN (DWT) is a cross-platform document scanning SDK that runs in the browser. It connects to scanners (TWAIN/SANE/ICA/WIA/eSCL), cameras, and other image capture devices, then lets you process, edit, and upload the scanned images — all from client-side JavaScript.
 
 > **Official documentation:** [Dynamic Web TWAIN Docs](https://www.dynamsoft.com/web-twain/docs/)
+>
+> **Samples list:** [Dynamic Web TWAIN Samples](https://github.com/dynamsoft/web-twain-samples/)
 
 ## When to Use Dynamic Web TWAIN
 
