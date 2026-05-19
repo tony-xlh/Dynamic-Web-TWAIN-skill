@@ -647,6 +647,9 @@ var count = DWTObject.HowManyImagesInBuffer;
 
 // Reorder images
 DWTObject.SwitchImage(0, 3); // Swap image at index 0 with index 3
+
+// Get image URL for display in an img element
+DWTObject.GetImageURL(index);
 ```
 
 ### Saving Locally
