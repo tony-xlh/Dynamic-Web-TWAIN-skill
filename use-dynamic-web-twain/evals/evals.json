@@ -1,0 +1,54 @@
+{
+  "skill_name": "use-dynamic-web-twain",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a complete HTML page that uses Dynamic Web TWAIN from CDN to scan documents. I need: a Scan button, an Upload button that uploads as PDF, a rotate button, and a button to convert the image to black and white. Make it work out of the box.",
+      "expected_output": "A complete, self-contained HTML file with CDN-based DWT setup including scan, upload-as-PDF, rotate, and B&W conversion functionality.",
+      "files": [],
+      "expectations": [
+        "Uses CDN script tag for dynamsoft.webtwain.min.js",
+        "Sets Dynamsoft.DWT.ProductKey to configure the license",
+        "Sets Dynamsoft.DWT.ResourcesPath to a CDN URL for static resources",
+        "Calls Dynamsoft.DWT.Load() to initialize the SDK",
+        "Registers OnWebTwainReady event for initialization callback",
+        "Creates a div container element for the DWT viewer",
+        "Uses SelectSourceAsync to let user choose a scanner",
+        "Uses AcquireImageAsync with scan parameters (e.g. PixelType, Resolution)",
+        "Upload implementation uses HTTPUpload with PDF image type (IT_PDF)",
+        "Uses RotateRight or RotateLeft for image rotation functionality",
+        "Uses ConvertToBW for black and white image conversion"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm building a React app and need to add document scanning with Dynamic Web TWAIN. Show me step by step how to install the npm package, configure it, and create a scanning component with a scan button and image viewer.",
+      "expected_output": "Step-by-step React setup guide covering npm install, resource copying, DWT initialization in useEffect, cleanup on unmount, scan button, and viewer container div.",
+      "files": [],
+      "expectations": [
+        "Mentions npm install dwt as the package installation step",
+        "Mentions copying static resources from node_modules/dwt/dist to public folder",
+        "Sets Dynamsoft.DWT.ResourcesPath to a local path (e.g. /dwt-resources)",
+        "Uses useRef to hold the DWT object reference across renders",
+        "Calls Dynamsoft.DWT.Load() inside a useEffect hook",
+        "Cleanup function in useEffect calls Unload() on component unmount",
+        "Renders a div element with id for the DWT viewer container",
+        "Implements a Scan button handler with SelectSourceAsync + AcquireImageAsync"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "In my Dynamic Web TWAIN app, I need to know when each page finishes scanning so I can update a page counter in the UI. What events should I listen to and how do I register them? Show me the code.",
+      "expected_output": "Code example showing DWTObject.RegisterEvent('OnPostTransferAsync', callback) for per-page scan completion, including page counter update logic.",
+      "files": [],
+      "expectations": [
+        "Mentions OnPostTransferAsync as the per-page post-scan event",
+        "Uses DWTObject.RegisterEvent() to register the event listener",
+        "Demonstrates using the callback parameter (outputInfo) to access scan data",
+        "Mentions OnBufferChanged as an additional event for buffer-level changes",
+        "Shows HowManyImagesInBuffer to get the total page count",
+        "Event registration is done after OnWebTwainReady callback fires"
+      ]
+    }
+  ]
+}
