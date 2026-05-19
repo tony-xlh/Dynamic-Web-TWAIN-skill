@@ -361,8 +361,8 @@ Dynamsoft.DWT.Containers = [
   {
     WebTwainId: "dwtObject",    // Optional — id to reference this instance
     ContainerId: "dwtContainer", // Required — id of the div element
-    Width: "100%",               // Required
-    Height: "500px",             // Required
+    Width: "360px",               // Required — width of the container appended to the div element
+    Height: "480px",             // Required — height of the container appended to the div element
   },
 ];
 ```
