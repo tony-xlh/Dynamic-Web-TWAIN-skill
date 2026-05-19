@@ -359,16 +359,16 @@ These properties must be set **before** calling `Dynamsoft.DWT.Load()`:
 ```js
 Dynamsoft.DWT.Containers = [
   {
-    WebTwainId: "dwtObject",    // Optional — id to reference this instance
-    ContainerId: "dwtContainer", // Required — id of the div element
-    Width: "360px",               // Required — width of the container appended to the div element
-    Height: "480px",             // Required — height of the container appended to the div element
+    WebTwainId: "dwtObject",      // Optional — id to reference this instance
+    ContainerId: "dwtContainer",  // Optional — id of the div element
+    Width: "360px",               // Optional — width of the container appended to the div element
+    Height: "480px",              // Optional — height of the container appended to the div element
   },
 ];
 ```
 
 - `ContainerId` must match the `id` of the `<div>` that will host the viewer
-- `WebTwainId` is optional but useful when you have multiple DWT instances
+- `WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance. You can leave `ContainerId` empty if you don't want DWT to create a viewer UI (headless mode).
 - Width/Height define the viewer dimensions
 
 ## Common Operations
