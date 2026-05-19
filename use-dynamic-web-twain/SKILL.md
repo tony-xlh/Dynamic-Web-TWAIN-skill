@@ -349,10 +349,13 @@ These properties must be set **before** calling `Dynamsoft.DWT.Load()`:
 | --- | --- | --- |
 | `ProductKey` | Yes | Trial or full license key from Dynamsoft |
 | `ResourcesPath` | Yes | Path to DWT static resources (.js, .css, .wasm files) |
-| `Containers` | Yes | Array of container configs: `{ WebTwainId?, ContainerId, Width, Height }` |
+| `Containers` | Yes | Array of container configs: `{ WebTwainId?, ContainerId?, Width?, Height? }` |
 | `AutoLoad` | No | Set to `false` for manual loading (recommended in frameworks) |
 | `ServiceInstallerLocation` | No | URL for the Dynamsoft Service installer download |
 | `IfCheckCssFiles` | No | Set to `false` when resources are bundled locally to skip CSS verification |
+| `IfAlwaysFocusOnPopupWindow` | No | Control whether the scanner-related UI and load/save UI are always displayed in the foreground. |
+
+
 
 ### Container Configuration
 
