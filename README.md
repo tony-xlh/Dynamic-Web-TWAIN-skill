@@ -14,6 +14,12 @@ You can put the `use-dynamic-web-twain` folder in the following places to make i
 
 Replace `cursor` width your agent's name, like `.codex/skills/`, `.claude/skills/`.
 
+You can also install the skill with the following command:
+
+```bash
+npx skills add https://github.com/tony-xlh/Dynamic-Web-TWAIN-skill/tree/main/use-dynamic-web-twain
+```
+
 ## Prompt Examples
 
 ### Asking Questions
