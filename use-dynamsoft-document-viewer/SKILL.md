@@ -7,7 +7,7 @@ license: MIT
 
 ## What is Dynamsoft Document Viewer?
 
-Dynamsoft Document Viewer (DDV) is a browser-based JavaScript SDK designed for viewing and editing images and PDFs. It provides a wide range of functionalities, including PDF annotation, page manipulation, image quality enhancement, and document saving.
+Dynamsoft Document Viewer (DDV) is a browser-based JavaScript SDK designed for viewing and editing images and PDFs. It provides a wide range of functionalities, including PDF annotation, page manipulation, image quality enhancement, redaction, and document saving.
 
 > **Official documentation:** [Dynamsoft Document Viewer Docs](https://www.dynamsoft.com/document-viewer/docs/)
 
@@ -18,6 +18,7 @@ Use DDV when you need:
 - View and annotate PDFs directly in the browser
 - View and manage scanned images
 - Edit scanned images (rotate, crop, enhance, overlay images using annotation, etc.)
+- Apply redaction to permanently hide sensitive content on documents
 - Save documents in various formats (PDF, TIFF, JPEG)
 
 Dynamsoft Document Viewer can be used with Dynamic Web TWAIN and Dynamsoft Mobile Document Scanner for a complete scanning and viewing solution.
@@ -227,6 +228,8 @@ The `references/` directory contains the full API reference, organized by topic:
 | [UnderlineAnnotationOptions](references/api/interface/annotationinterface/underlineannotationoptions.md) | Underline annotation options |
 | [StrikeoutStyle](references/api/interface/annotationinterface/strikeoutstyle.md) | Strikeout annotation style |
 | [StrikeoutAnnotationOptions](references/api/interface/annotationinterface/strikeoutannotationoptions.md) | Strikeout annotation options |
+| [RedactionStyle](references/api/interface/annotationinterface/redactionstyle.md) | Redaction annotation style |
+| [RedactionAnnotationOptions](references/api/interface/annotationinterface/redactionannotationoptions.md) | Redaction annotation options |
 
 ### Style Interfaces
 

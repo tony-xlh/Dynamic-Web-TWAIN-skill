@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(try { $response = Invoke-WebRequest -Uri \"https://www.dynamsoft.com/web-twain/docs/llms.txt\" -TimeoutSec 15 -UseBasicParsing; $response.Content } catch { $_.Exception.Message })",
+      "Bash(Remove-Item -Recurse -Force \"g:\\\\git\\\\Dynamic-Web-TWAIN-skill\\\\use-dynamic-web-twain\\\\references\")"
+    ]
+  }
+}

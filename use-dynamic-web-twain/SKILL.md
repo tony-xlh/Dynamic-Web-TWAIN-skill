@@ -292,56 +292,42 @@ export default App;
 
 ## Reference Documentation
 
-The `references/` directory contains the full API reference, organized by topic:
+The full API reference and guides are available online. When you need details beyond what's in this skill, fetch documentation from:
 
-### Core API
+**Index:** `https://www.dynamsoft.com/web-twain/docs/llms.txt`
 
-| File | Content |
+This lists all available documentation pages with their URLs. Fetch it first to discover the relevant page, then fetch that page for the full content.
+
+**Key API reference pages (under `info/api/`):**
+
+| Topic | Online URL |
 | --- | --- |
-| [index.md](references/index.md) | Full API index and navigation |
-| [Dynamsoft_WebTwainEnv.md](references/Dynamsoft_WebTwainEnv.md) | Global config, `Dynamsoft.DWT` methods, events |
-| [Dynamsoft_Enum.md](references/Dynamsoft_Enum.md) | All enumerations (`PixelType`, `ImageType`, `UploadDataFormat`, etc.) |
-| [interfaces.md](references/interfaces.md) | TypeScript interface definitions |
+| API Index | `https://www.dynamsoft.com/web-twain/docs/info/api/index.md` |
+| Global config (`Dynamsoft.DWT`) | `https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.md` |
+| Enumerations | `https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.md` |
+| Interfaces | `https://www.dynamsoft.com/web-twain/docs/info/api/interfaces.md` |
+| Scanner acquisition | `https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.md` |
+| Buffer management | `https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.md` |
+| Image editing | `https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Edit.md` |
+| Input/Output | `https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.md` |
+| Viewer control | `https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.md` |
+| Utility methods | `https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Util.md` |
+| Device management | `https://www.dynamsoft.com/web-twain/docs/info/api/Device.md` |
+| File uploader | `https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_FileUploader.md` |
+| RESTful API | `https://www.dynamsoft.com/web-twain/docs/info/api/restful.md` |
+| Barcode Reader add-on | `https://www.dynamsoft.com/web-twain/docs/info/api/Addon_BarcodeReader.md` |
+| OCR add-on | `https://www.dynamsoft.com/web-twain/docs/info/api/Addon_OCR.md` |
+| PDF Rasterizer add-on | `https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.md` |
+| Webcam add-on | `https://www.dynamsoft.com/web-twain/docs/info/api/Addon_Webcam.md` |
+| Appendix | `https://www.dynamsoft.com/web-twain/docs/info/api/appendix.md` |
 
-### WebTwain Instance
-
-| File | Content |
-| --- | --- |
-| [WebTwain_Acquire.md](references/WebTwain_Acquire.md) | Scanner/image acquisition methods, events |
-| [WebTwain_Buffer.md](references/WebTwain_Buffer.md) | Buffer management, tags, documents, events |
-| [WebTwain_Edit.md](references/WebTwain_Edit.md) | Image editing (rotate, crop, flip, mirror, etc.) |
-| [WebTwain_IO.md](references/WebTwain_IO.md) | Image input/output, load/save, upload/download |
-| [WebTwain_Viewer.md](references/WebTwain_Viewer.md) | Viewer control and display settings |
-| [WebTwain_Util.md](references/WebTwain_Util.md) | Utility methods |
-
-### Other Modules
-
-| File | Content |
-| --- | --- |
-| [Device.md](references/Device.md) | Device/scanner management |
-| [Dynamsoft_FileUploader.md](references/Dynamsoft_FileUploader.md) | File uploader module |
-| [restful.md](references/restful.md) | RESTful API for remote scanning |
-
-### Add-ons
-
-| File | Content |
-| --- | --- |
-| [Addon_BarcodeReader.md](references/Addon_BarcodeReader.md) | Barcode Reader add-on |
-| [Addon_OCR.md](references/Addon_OCR.md) | OCR add-on |
-| [Addon_PDF.md](references/Addon_PDF.md) | PDF rasterizer add-on |
-| [Addon_Webcam.md](references/Addon_Webcam.md) | Webcam capture add-on |
-
-### Appendix
-
-| File | Content |
-| --- | --- |
-| [appendix.md](references/appendix.md) | Appendix and supplementary info |
+Additional guides available via llms.txt: hello-world tutorials, general usage, extended usage (barcode, OCR, PDF, UI customization, RESTful API), FAQs, deployment, framework integration (React, Vue, Angular), upgrade guides, and release notes.
 
 ---
 
 ## DWT Configuration Reference
 
-> See [Dynamsoft_WebTwainEnv.md](references/Dynamsoft_WebTwainEnv.md) for the full global API reference.
+> See [Global APIs](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.md) for the full global API reference.
 
 These properties must be set **before** calling `Dynamsoft.DWT.Load()`:
 
@@ -378,7 +364,7 @@ Dynamsoft.DWT.Containers = [
 
 ### Image Acquisition
 
-> See [WebTwain_Acquire.md](references/WebTwain_Acquire.md) for the full acquire API reference.
+> See [Acquire APIs](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.md) for the full acquire API reference.
 
 DWT provides two modes: silent (custom settings) and interactive (scanner's native UI):
 
@@ -437,7 +423,7 @@ Key `AcquireImageAsync` options:
 
 ### Image Processing
 
-> See [WebTwain_Edit.md](references/WebTwain_Edit.md) for the full image editing API reference.
+> See [Edit APIs](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Edit.md) for the full image editing API reference.
 
 ```js
 function binarizeImage() {
@@ -533,7 +519,7 @@ function AcquireImage() {
 
 ### Upload
 
-> See [WebTwain_IO.md](references/WebTwain_IO.md) and [Dynamsoft_FileUploader.md](references/Dynamsoft_FileUploader.md) for the full upload API reference.
+> See [I/O APIs](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.md) and [Uploader APIs](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_FileUploader.md) for the full upload API reference.
 
 ```js
 // Upload current image as PNG
@@ -596,7 +582,7 @@ function getImageAsBase64(indices) {
 
 ### Input
 
-> See [WebTwain_IO.md](references/WebTwain_IO.md) for the full I/O API reference.
+> See [I/O APIs](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.md) for the full I/O API reference.
 
 ```js
 // Load image from file
@@ -630,7 +616,7 @@ function loadImageFromBinary(imageData){
 
 ### Buffer Management
 
-> See [WebTwain_Buffer.md](references/WebTwain_Buffer.md) for the full buffer API reference.
+> See [Buffer APIs](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.md) for the full buffer API reference.
 
 ```js
 // Navigate through scanned images
@@ -657,7 +643,7 @@ DWTObject.GetImageURL(index);
 
 ### Saving Locally
 
-> See [WebTwain_IO.md](references/WebTwain_IO.md) for more save/export options.
+> See [I/O APIs](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.md) for more save/export options.
 
 ```js
 // Save current image as file
@@ -714,7 +700,7 @@ DWTObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
 
 ## Enum Reference
 
-> See [Dynamsoft_Enum.md](references/Dynamsoft_Enum.md) for the complete enum reference — `PixelType`, `ImageType`, `UploadDataFormat`, `Cap`, `TransferMode`, `TIFFCompressionType`, and more.
+> See [Enumerations](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.md) for the complete enum reference — `PixelType`, `ImageType`, `UploadDataFormat`, `Cap`, `TransferMode`, `TIFFCompressionType`, and more.
 
 Quick reference for the most common enums:
 
