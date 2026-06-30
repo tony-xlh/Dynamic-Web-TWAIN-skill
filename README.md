@@ -8,11 +8,11 @@ You can put the `use-dynamic-web-twain` folder in the following places to make i
 
 | Location            | Scope               |
 | ------------------- | ------------------- |
-| `.agents/skills/`   | Project-level       |
-| `.cursor/skills/`   | Project-level       |
-| `~/.cursor/skills/` | User-level (global) |
+| `.agents/skills/`   | Project-level (for all agents)       |
+| `.claude/skills/`   | Project-level       |
+| `~/.claude/skills/` | User-level (global) |
 
-Replace `cursor` width your agent's name, like `.codex/skills/`, `.claude/skills/`.
+Replace `claude` with your agent's name, like `.codex/skills/`, `.cursor/skills/`.
 
 You can also install the skill with the following command:
 
